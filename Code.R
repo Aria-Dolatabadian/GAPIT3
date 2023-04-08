@@ -31,3 +31,117 @@ myGAPIT <- GAPIT(
   PCA.3d=TRUE,                                          # plot 3d interactive PCA
   file.output=T
 )
+
+
+
+
+#GLM
+#The GAPIT uses Least Squares to solve the model. The GAPIT code for running a GLM is:
+
+  myGAPIT_GLM <- GAPIT(
+  Y=myY[,c(1,2)],
+  GD=myGD,
+  GM=myGM,
+  model="GLM",
+  PCA.total=5,
+  file.output=T
+  )
+
+#MLM
+#EMMA method is used in GAPIT, the code of MLM is:
+
+  myGAPIT_MLM <- GAPIT(
+  Y=myY[,c(1,2)],
+  GD=myGD,
+  GM=myGM,
+  model="MLM",
+  PCA.total=5,
+  file.output=T
+  )
+
+#CMLM
+#Compress Mixed Linear Model is published by Zhang in 2010. The code of CMLM is:
+
+  myGAPIT_CMLM <- GAPIT(
+  Y=myY[,c(1,2)],
+  GD=myGD,
+  GM=myGM,
+  model="CMLM",
+  PCA.total=5,
+  file.output=T
+  )
+
+#MLMM
+#Multiple Loci Mixied linear Model is published by Segura in 2012. The code of MLMM in GAPIT is:
+
+  myGAPIT_MLMM <- GAPIT(
+  Y=myY[,c(1,2)],
+  GD=myGD,
+  GM=myGM,
+  model="MLMM",
+  PCA.total=5,
+  file.output=T
+  )
+
+#SUPER
+#Settlement of MLM Under Progressively Exclusive Relation- ship is published by Qishan in 2014. The code of SUPER is:
+
+  myGAPIT_SUPER <- GAPIT(
+  Y=myY[,c(1,2)],
+  GD=myGD,
+  GM=myGM,
+  model="SUPER",
+  PCA.total=5,
+  file.output=T
+  )
+
+#Farm-CPU
+#Fixed and random model Circulating Probability Unification (FarmCPU) is published by Xiaolei in 2016. The code of Farm-CPU in GAPIT is:
+
+  myGAPIT_FarmCPU <- GAPIT(
+  Y=myY[,c(1,2)],
+  GD=myGD,
+  GM=myGM,
+  model="FarmCPU",
+  PCA.total=5,
+  file.output=T
+  )
+
+
+#GS
+#gBLUP
+#gBLUP used marker kinship to replace the pedgree relationship matrix. The code is:
+
+  myGAPIT_gBLUP <- GAPIT(
+  Y=myY[,c(1,2)],
+  GD=myGD,
+  GM=myGM,
+  model="gBLUP",
+  PCA.total=5,
+  file.output=T
+  )
+
+#cBLUP
+#cBLUP used group kinship to replace the individual matrix. The code is:
+
+  myGAPIT_cBLUP <- GAPIT(
+  Y=myY[,c(1,2)],
+  GD=myGD,
+  GM=myGM,
+  model="cBLUP",
+  PCA.total=5,
+  file.output=T
+  )
+
+#sBLUP
+#sBLUP used SUPER method to build psedue QTN kinship matrix. The code is:
+
+  myGAPIT_sBLUP <- GAPIT(
+  Y=myY[,c(1,2)],
+  GD=myGD,
+  GM=myGM,
+  model="sBLUP",
+  PCA.total=5,
+  file.output=T
+  )
+
