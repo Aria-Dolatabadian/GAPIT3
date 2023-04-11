@@ -3,6 +3,11 @@
 source("http://www.zzlab.net/GAPIT/GAPIT.library.R")
 source("http://www.zzlab.net/GAPIT/gapit_functions.txt")
 
+#or
+install.packages("devtools")
+devtools::install_github("jiabowang/GAPIT3",force=TRUE)
+library(GAPIT3)
+
 # loading data set
 myY=read.table("mdp_traits.txt", head = TRUE)
 myGD=read.table("mdp_numeric.txt",head=T)
