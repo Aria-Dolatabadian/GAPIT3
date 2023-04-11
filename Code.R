@@ -1,4 +1,13 @@
 #https://github.com/Manigben/GAPIT3
+
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("snpStats")
+
+
+devtools::install_github("SFUStatgen/LDheatmap")
+
 # loading packages for GAPIT and GAPIT functions
 source("http://www.zzlab.net/GAPIT/GAPIT.library.R")
 source("http://www.zzlab.net/GAPIT/gapit_functions.txt")
